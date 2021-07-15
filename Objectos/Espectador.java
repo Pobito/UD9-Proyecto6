@@ -44,9 +44,13 @@ public class Espectador {
 	}
 	
 	//METODOS
-	public  boolean aptoEdad(Pelicula peli) {
+	public boolean aptoEdad(Pelicula peli) {
+		boolean apto = false;
 		
-		boolean apto = (peli.getedadMinima() <= getEdad()) true : false;
+		if (getEdad() > peli.getEdadMinima()) {
+            apto = true;
+        }
+		
 		return apto;
 	}
 	
